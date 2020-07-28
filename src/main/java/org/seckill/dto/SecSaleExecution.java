@@ -1,10 +1,10 @@
 package org.seckill.dto;
 
 import org.seckill.entity.SuccessKilled;
-import org.seckill.enums.SecKillStatEnum;
+import org.seckill.enums.SecSaleStatEnum;
 
 /*封装秒杀执行后的结果*/
-public class SecKillExecution {
+public class SecSaleExecution {
     private long secKillId;
 
     //秒杀执行结果状态
@@ -16,14 +16,14 @@ public class SecKillExecution {
     //秒杀成功对象
     private SuccessKilled successKilled;
 
-    public SecKillExecution(long secKillId, SecKillStatEnum statEnum, SuccessKilled successKilled) {
+    public SecSaleExecution(long secKillId, SecSaleStatEnum statEnum, SuccessKilled successKilled) {
         this.secKillId = secKillId;
         this.state = statEnum.getState();
         this.stateInfo = statEnum.getStateInfo();
         this.successKilled = successKilled;
     }
 
-    public SecKillExecution(long secKillId, SecKillStatEnum statEnum) {
+    public SecSaleExecution(long secKillId, SecSaleStatEnum statEnum) {
         this.secKillId = secKillId;
         this.state = statEnum.getState();
         this.stateInfo = statEnum.getStateInfo();

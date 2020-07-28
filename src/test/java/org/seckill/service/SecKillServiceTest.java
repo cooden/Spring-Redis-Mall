@@ -3,7 +3,7 @@ package org.seckill.service;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.seckill.dto.Exposer;
-import org.seckill.dto.SecKillExecution;
+import org.seckill.dto.SecSaleExecution;
 import org.seckill.entity.Seckill;
 import org.seckill.exception.RepeatKillException;
 import org.seckill.exception.SecKillCloseException;
@@ -15,7 +15,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"classpath:spring/spring-dao.xml","classpath:spring/spring-service.xml"})
 public class SecKillServiceTest {
@@ -53,7 +52,7 @@ public class SecKillServiceTest {
             String md5 = exposer.getMd5();
 
             try {
-                SecKillExecution execution=secKillService.excuteSecKillId(id,phone,md5);
+                SecSaleExecution execution=secKillService.excuteSecKillId(id,phone,md5);
                 logger.info("result={}",execution);
             }catch (RepeatKillException e){
                 logger.error(e.getMessage());
@@ -82,7 +81,7 @@ public class SecKillServiceTest {
         String md5 = "61d53dbaa99f8f5f96a742d0481fe48f";
 
         try {
-            SecKillExecution execution=secKillService.excuteSecKillId(id,phone,md5);
+            SecSaleExecution execution=secKillService.excuteSecKillId(id,phone,md5);
             logger.info("result={}",execution);
         }catch (RepeatKillException e){
             logger.error(e.getMessage());
@@ -98,7 +97,7 @@ public class SecKillServiceTest {
         Exposer exposer=secKillService.exportSecKillUrl(seckillId);
         if (exposer.isExposed()){
             String md5 = exposer.getMd5();
-            SecKillExecution execution=secKillService.excuteSecKillProcedure(seckillId,phone,md5);
+            SecSaleExecution execution=secKillService.excuteSecKillProcedure(seckillId,phone,md5);
             logger.info(execution.getStateInfo());
         }
 

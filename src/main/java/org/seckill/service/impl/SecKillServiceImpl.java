@@ -5,10 +5,10 @@ import org.seckill.dao.SeckillDao;
 import org.seckill.dao.SuccessKilledDao;
 import org.seckill.dao.cache.RedisDao;
 import org.seckill.dto.Exposer;
-import org.seckill.dto.SecKillExecution;
+import org.seckill.dto.SecSaleExecution;
 import org.seckill.entity.Seckill;
 import org.seckill.entity.SuccessKilled;
-import org.seckill.enums.SecKillStatEnum;
+import org.seckill.enums.SecSaleStatEnum;
 import org.seckill.exception.RepeatKillException;
 import org.seckill.exception.SecKillCloseException;
 import org.seckill.exception.SecKillException;
@@ -110,7 +110,7 @@ public class SecKillServiceImpl implements SecKillService {
     * 2：保证事务方法的执行时间尽可能短，不要穿插其他的网络操作（RPC/HTTP请求），如果需要这些网络操作获取剥离到事务外部
     * 3：不是所有的方法都需要事务，如只有一条修改操作，或者是只读操作不需要事务控制
     * */
-    public SecKillExecution excuteSecKillId(long secKillId, long userPhone, String md5) throws SecKillException, RepeatKillException, SecKillCloseException {
+    public SecSaleExecution excuteSecKillId(long secKillId, long userPhone, String md5) throws SecKillException, RepeatKillException, SecKillCloseException {
         if(md5==null||!md5.equals(getMD5(secKillId))){
             throw new SecKillException("secKill Data Review");
         }
@@ -134,24 +134,23 @@ public class SecKillServiceImpl implements SecKillService {
                 }else {
                     //秒杀成功
                     SuccessKilled successKilled = successKilledDao.queryByIdWithSeckill(secKillId,userPhone);
-                    return new SecKillExecution(secKillId, SecKillStatEnum.SUCCESS,successKilled);
+                    return new SecSaleExecution(secKillId, SecSaleStatEnum.SUCCESS,successKilled);
                 }
             }
         }catch (SecKillCloseException e1) {
             throw e1;
-        }catch (RepeatKillException e2){
+        }catch (RepeatKillException e2) {
             throw e2;
-        }catch
-         (Exception e){
+        }catch (Exception e) {
             logger.error(e.getMessage(),e);
             //所有编译器异常转换为运行期异常
             throw  new SecKillException("secKill inner error:"+e.getMessage());
         }
     }
 
-    public SecKillExecution excuteSecKillProcedure(long secKillId, long userPhone, String md5) {
+    public SecSaleExecution excuteSecKillProcedure(long secKillId, long userPhone, String md5) {
         if (md5==null||!md5.equals(getMD5(secKillId))){
-            return new SecKillExecution(secKillId,SecKillStatEnum.DATA_REWRITE);
+            return new SecSaleExecution(secKillId, SecSaleStatEnum.DATA_REWRITE);
         }
         Date killTime = new Date();
         Map<String,Object> map=new HashMap<String, Object>();
@@ -167,13 +166,13 @@ public class SecKillServiceImpl implements SecKillService {
             if (result==1){
                 SuccessKilled sk = successKilledDao.
                         queryByIdWithSeckill(secKillId,userPhone);
-                return new SecKillExecution(secKillId,SecKillStatEnum.SUCCESS,sk);
+                return new SecSaleExecution(secKillId, SecSaleStatEnum.SUCCESS,sk);
             }else {
-                return new SecKillExecution(secKillId,SecKillStatEnum.stateOf(result));
+                return new SecSaleExecution(secKillId, SecSaleStatEnum.stateOf(result));
             }
         }catch (Exception e){
             logger.error(e.getMessage(),e);
-            return new SecKillExecution(secKillId,SecKillStatEnum.INNER_ERROR);
+            return new SecSaleExecution(secKillId, SecSaleStatEnum.INNER_ERROR);
         }
 
     }

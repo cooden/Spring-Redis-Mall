@@ -1,10 +1,10 @@
 package org.seckill.web;
 
 import org.seckill.dto.Exposer;
-import org.seckill.dto.SecKillExecution;
+import org.seckill.dto.SecSaleExecution;
 import org.seckill.dto.SecKillResult;
 import org.seckill.entity.Seckill;
-import org.seckill.enums.SecKillStatEnum;
+import org.seckill.enums.SecSaleStatEnum;
 import org.seckill.exception.RepeatKillException;
 import org.seckill.exception.SecKillCloseException;
 import org.seckill.service.SecKillService;
@@ -76,27 +76,27 @@ public class SeckillController {
             method = RequestMethod.POST,
             produces = {"application/json;charset=UTF-8"})
     @ResponseBody
-    public SecKillResult<SecKillExecution> execute(@PathVariable("seckillId") Long seckillId,
+    public SecKillResult<SecSaleExecution> execute(@PathVariable("seckillId") Long seckillId,
                                                    @PathVariable("md5") String md5,
                                                    @CookieValue(value = "killPhone", required = false) Long phone) {
 
         if (phone == null) {
-            return new SecKillResult<SecKillExecution>(false, "未注册");
+            return new SecKillResult<SecSaleExecution>(false, "未注册");
         }
         try {
             //优化后，使用存储过程
-            SecKillExecution execution = secKillService.excuteSecKillProcedure(seckillId,phone,md5);
-            return new SecKillResult<SecKillExecution>(true, execution);
+            SecSaleExecution execution = secKillService.excuteSecKillProcedure(seckillId, phone, md5);
+            return new SecKillResult<SecSaleExecution>(true, execution);
         } catch (SecKillCloseException e) {
-            SecKillExecution execution = new SecKillExecution(seckillId, SecKillStatEnum.END);
-            return new SecKillResult<SecKillExecution>(true, execution);
+            SecSaleExecution execution = new SecSaleExecution(seckillId, SecSaleStatEnum.END);
+            return new SecKillResult<SecSaleExecution>(true, execution);
         } catch (RepeatKillException e) {
-            SecKillExecution execution = new SecKillExecution(seckillId, SecKillStatEnum.REPEAT_KILL);
-            return new SecKillResult<SecKillExecution>(true, execution);
+            SecSaleExecution execution = new SecSaleExecution(seckillId, SecSaleStatEnum.REPEAT_KILL);
+            return new SecKillResult<SecSaleExecution>(true, execution);
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
-            SecKillExecution execution = new SecKillExecution(seckillId, SecKillStatEnum.INNER_ERROR);
-            return new SecKillResult<SecKillExecution>(true, execution);
+            SecSaleExecution execution = new SecSaleExecution(seckillId, SecSaleStatEnum.INNER_ERROR);
+            return new SecKillResult<SecSaleExecution>(true, execution);
         }
     }
 
