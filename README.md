@@ -2,11 +2,11 @@
 
 权限管理
 security_resource
-|
+->
 security_permission
-|
+->
 security_role_permission
-|
+->
 security_role
 
 
