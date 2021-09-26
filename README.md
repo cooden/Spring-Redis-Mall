@@ -9,4 +9,9 @@ security_role_permission
 ->
 security_role
 
+可简化为
+security_resource
+->
+security_role_permission->
+security_role
 
