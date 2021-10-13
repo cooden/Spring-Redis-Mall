@@ -52,7 +52,7 @@ public class SecKillServiceTest {
             String md5 = exposer.getMd5();
 
             try {
-                SecSaleExecution execution=secKillService.excuteSecKillId(id,phone,md5);
+                SecSaleExecution execution=secKillService.excuteSell(id,phone,md5);
                 logger.info("result={}",execution);
             }catch (RepeatKillException e){
                 logger.error(e.getMessage());
@@ -81,7 +81,7 @@ public class SecKillServiceTest {
         String md5 = "61d53dbaa99f8f5f96a742d0481fe48f";
 
         try {
-            SecSaleExecution execution=secKillService.excuteSecKillId(id,phone,md5);
+            SecSaleExecution execution=secKillService.excuteSell(id,phone,md5);
             logger.info("result={}",execution);
         }catch (RepeatKillException e){
             logger.error(e.getMessage());

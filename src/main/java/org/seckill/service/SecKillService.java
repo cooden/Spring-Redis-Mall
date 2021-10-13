@@ -26,7 +26,7 @@ public interface SecKillService {
     Exposer exportSecKillUrl(long secKillId);
 
     /*执行秒杀操作 */
-    SecSaleExecution excuteSecKillId(long secKillId, long userPhone, String md5)
+    SecSaleExecution excuteSell(long secKillId, long userPhone, String md5)
     throws SecKillException, RepeatKillException, SecKillCloseException;
     /*执行秒杀操作 by 存储过程 */
     SecSaleExecution excuteSecKillProcedure(long secKillId, long userPhone, String md5);

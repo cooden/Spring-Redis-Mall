@@ -14,14 +14,14 @@
         and number >0;
     </update>
 
-    <select id="queryById" resultType="Seckill" parameterType="long">
+    <select id="queryById" resultType="org.seckill.entity.Seckill" parameterType="long">
         SELECT
             seckill.seckill_id,seckill.name,seckill.number,seckill.start_time,seckill.end_time,seckill.create_time
         FROM seckill
         WHERE seckill.seckill_id = #{seckillId}
     </select>
 
-    <select id="queryAll" resultType="Seckill">
+    <select id="queryAll" resultType="org.seckill.entity.Seckill">
         select seckill_id ,name,number,start_time,end_time,create_time
         from seckill.seckill
         order by create_time desc
@@ -36,8 +36,6 @@
             #{killTime,jdbcType=TIMESTAMP,mode=IN},
             #{result,jdbcType=INTEGER,mode=OUT}
             )
-
-
     </select>
     
 </mapper>

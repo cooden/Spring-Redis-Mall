@@ -12,7 +12,7 @@ public interface SeckillDao {
      * 减库存
      * 返回int类型，如果影响行数>1,表示更新的记录行数
      *
-     * @param seckilled
+     * @param seckillId
      * @param killTime
      * @return
      **/

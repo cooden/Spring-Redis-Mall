@@ -8,6 +8,7 @@ import org.seckill.enums.SecSaleStatEnum;
 import org.seckill.exception.RepeatKillException;
 import org.seckill.exception.SecKillCloseException;
 import org.seckill.service.SecKillService;
+import org.apache.shiro.SecurityUtils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Date;
 import java.util.List;
@@ -24,7 +26,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("/seckill")//url:/模块/资源/{id}/细分
-public class SeckillController {
+public class mainController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
@@ -57,8 +59,7 @@ public class SeckillController {
     //ajax json
 
     @RequestMapping(value = "/seckill/{seckillId}/exposer",
-            method = RequestMethod.POST,
-            produces = {"application/json;charset=UTF-8"})
+            method = RequestMethod.POST)
     @ResponseBody
     public SecKillResult<Exposer> exposer(@PathVariable("seckillId") Long seckillId) {
         SecKillResult<Exposer> result;
@@ -73,8 +74,7 @@ public class SeckillController {
     }
 
     @RequestMapping(value = "/seckill/{seckillId}/{md5}/execution",
-            method = RequestMethod.POST,
-            produces = {"application/json;charset=UTF-8"})
+            method = RequestMethod.POST)
     @ResponseBody
     public SecKillResult<SecSaleExecution> execute(@PathVariable("seckillId") Long seckillId,
                                                    @PathVariable("md5") String md5,
@@ -101,13 +101,32 @@ public class SeckillController {
     }
 
 
-    @RequestMapping(value = "/seckill/time/now", method = RequestMethod.GET,
-            produces = {"application/json;charset=UTF-8"})
+    @RequestMapping(value = "/seckill/time/now", method = RequestMethod.GET)
     @ResponseBody
     public SecKillResult<Long> time() {
         Date now = new Date();
         return new SecKillResult<Long>(true, now.getTime());
     }
 
+    @RequestMapping(value = "/settle/index.html", method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView test() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("/report/transaction");
+        modelAndView.addObject("curReportTime");
+        return modelAndView;
+    }
+
+    protected String getCurrentUser() {
+        return SecurityUtils.getSubject().getSession().getAttribute("userSessionKey").toString();
+    }
+
+//    protected String getCurrentUser() {
+//        return getSessionObj("").toString();
+//    }
+//
+//    private Object getSessionObj(String key) {
+//        return SecurityUtils.getSubject().getSession().getAttribute(key);
+//    }
 }
 

@@ -28,10 +28,11 @@ create table success_killed(
   `user_phone`  bigint not null COMMENT '用户手机号',
   `state`  tinyint not null default -1 COMMENT '状态标志:-1:无效 0:成功 1:已付款 2:已发货',
   `create_time` timestamp not null DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-  PRIMARY KEY (seckill_id,user_phone), /*联合主键*/
+  PRIMARY KEY (seckill_id, user_phone), /*联合主键*/
   KEY idx_create_time (create_time)
 )ENGINE =InnoDB DEFAULT charset =utf8 comment='秒杀成功明细表'
 
 -- 为什么要手写DDL
 -- 记录每次上线的DDL修改
+
 
