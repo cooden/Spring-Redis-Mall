@@ -1,6 +1,7 @@
 package org.seckill.service.impl;
 
 import org.apache.commons.collections.MapUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.seckill.RedisHashOps;
 import org.seckill.dao.SeckillDao;
 import org.seckill.dao.SuccessKilledDao;
@@ -186,8 +187,7 @@ public class SecKillServiceImpl implements SecKillService {
         transaction.forEach(record -> {
             addAmount(record, BigDecimal.valueOf());
         });
-        double totalAmt = hvpsDetailList.stream()
-                .filter((record) -> StringUtils.isBlank());
+        double totalAmt = hvpsDetailList.stream().filter((record) -> StringUtils.isBlank(record));
         return result;
     }
 

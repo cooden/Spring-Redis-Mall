@@ -1,0 +1,108 @@
+<html>
+<body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script type="text/javascript" src="resource/script/report.js"></script>
+<script type="text/javascript">
+    var text = "${user.userName}";
+<!--    waterMarker.set(text);-->
+
+
+
+
+
+
+
+
+</script>
+<a href="/seckill/seckill/list"><h2>Hello 秒杀!</h2></a>
+<div class="row" style="margin-top:5px;">
+    <div class="col-xs-12 widget-container-col ui-sortable" style="min-height: 127px;">
+        <div class="widget-box transparent ui-sortable-handle" style="opacity: 1; z-index: 0;">
+            <div class="widget-header">
+                <div class="form-inline" role="form">
+                    <span style="color: #4383B4;">类型</span>
+                    <select class="form-control select2" name="queryType" id="queryType" style="margin-left: 5px;">
+                        <option value="dayData">A</option>
+                        <option value="weekMonthData">B</option>
+                        <option value="detailData">C</option>
+                    </select>
+                    <span style="color: #4383B4; padding-left: 15px">报表日期</span>
+                    <input class="form-control" name="reportDate" id="reportDate" type="date" fomrat="yyyy-MM-dd"
+                           style="margin-left: 5px; width: 138px"/>
+                    <input type="hidden" name="hidReportDate" id="hidReportDate"/>
+
+                    <button id="btnSearch" type="button" class="btn btn-info btn-sm" style="margin-left: 5px;"><i
+                            class="fa fa-search"></i> 查询
+                    </button>
+                    <button id="btnRefresh" type="button" class="btn btn-info btn-sm" style="margin-left: 5px;"><i
+                            class="fa fa-search"></i> 查询并计算
+                    </button>
+                    <div style="float: right;">
+                        <span style="color: #4383B4;">邮件接收人</span>
+                        <input class="form-control" name="mailTo" id="mailTo" type="text" size="30"
+                               style="margin-left: 5px; width: 160px;" placeholder="英文名，逗号分隔"/>
+                        <button id="btnSendMail" type="button" class="btn btn-info btn-sm" style="margin-left: 5px;"><i
+                                class="fa fa-envelope"></i> 发送邮件
+                        </button>
+                    </div>
+                </div>
+
+                <h4 class="widget-title lighter"><span id="refreshTime"></span></h4>
+                <div class="widget-toolbar no-border">
+                    <a href="#" data-action="fullscreen" class="orange2">
+                        <i class="ace-icon fa fa-arrows-alt"></i>
+                    </a>
+                    <a href="#" data-action="collapse" class="green">
+                        <i class="ace-icon fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="widget-body" style="display: block;">
+                <div class="widget-box transparent ui-sortable-handle"
+                     style="opacity: 1; z-index: 0; padding-top: 10px;">
+                    <div class="form-inline" role="form">
+                        <div style="padding-right: 15px;">
+                            <table id="parameter" class="module" style="border-left: 1px dashed white; width: 300px;
+                                border-right: 1px dashed white; border-bottom: 1px dashed #0C0C0C;"></table>
+                        </div>
+                        <div module="day">
+                            <h5 style="font-weight: bold; float: left">日报汇总</h5>
+                            <button id="dailyReportSummarySaveBtn" type="button" class="btn btn-info btn-sm"
+                                    style="float: right"><i class="fa fa-save"></i> 保存
+                            </button>
+                            <table id="dailyReportSummaryTable" class="module"
+                                   style="width: 100%; white-space: nowrap;"></table>
+                        </div>
+                        <div module="detail">
+                            <h5 style="font-weight: bold; float: left">日报明细流入表</h5>
+                            <table id="dailyInReportTable" class="module" style="white-space: nowrap;"></table>
+                            <h5 style="font-weight: bold; float: left">日报明细流出表</h5>
+                            <table id="dailyOutReportTable" class="module" style="white-space: nowrap;"></table>
+                        </div>
+                        <div module="week">
+                            <h5 style="font-weight: bold; float: left">周报</h5>
+                            <button id="weeklyReportSaveBtn" type="button" class="btn btn-info btn-sm"
+                                    style="float: right"><i class="fa fa-save"></i> 保存
+                            </button>
+                            <table id="weeklyReportTable" class="module" style="border-left: 1px dashed white;
+                                    border-right: 1px dashed white; border-bottom: 1px dashed #0C0C0C; white-space: nowrap;"></table>
+                        </div>
+                        <div module="month">
+                            <h5 style="font-weight: bold; float: left">月报</h5>
+                            <button id="monthlyReportSaveBtn" type="button" class="btn btn-info btn-sm"
+                                    style="float: right"><i class="fa fa-save"></i> 保存
+                            </button>
+                            <table id="monthlyReportTable" class="module" style="border-left: 1px dashed white;
+                                    border-right: 1px dashed white; border-bottom: 1px dashed #0C0C0C; white-space: nowrap;"></table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

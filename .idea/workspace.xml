@@ -32,38 +32,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bb1611e-f3da-4777-80ab-af4a027377be" name="Default Changelist" comment="0728">
-      <change afterPath="$PROJECT_DIR$/RedisHashOps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/seckill/EnumConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/seckill/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/seckill/RedisConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/seckill/RedisHashOps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/seckill/RedisLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/seckill/RouteConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/seckill/SecurityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/seckill/job/AlarmJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/seckill/job/BaseJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/seckill/job/ReportJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/seckill/performance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/seckill/service/ConfigService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/seckill/service/coreService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/dynamic.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/report-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/script/report.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seckill/dao/SecurityDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fail.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/list.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seckill.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/seckill.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/seckill/dao/SeckillDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seckill/dao/SeckillDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/seckill/service/SecKillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seckill/service/SecKillService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seckill/SecurityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seckill/SecurityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/seckill/service/impl/SecKillServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seckill/service/impl/SecKillServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/seckill/web/SeckillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seckill/web/mainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/seckill/web/record.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seckill/web/record.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SeckillDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SeckillDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/sql/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/sql/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/seckill/service/SecKillServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/seckill/service/SecKillServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resource/script/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resource/script/report.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/seckill.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/seckill/dao/cache/RedisDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/seckill/dao/cache/RedisDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/seckill/dto/SecKillExecution.class" beforeDir="false" />
@@ -131,12 +106,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Jsp File" />
         <option value="JavaScript File" />
         <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -177,6 +152,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="ToolWindowCommit.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -200,18 +176,19 @@
       <recent name="org.seckill.service" />
       <recent name="org.seckill.dao" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.seckill.dao" />
+      <recent name="org.seckill.dao.cache" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\secSale\src\main\webapp" />
       <recent name="D:\Projects\secSale" />
       <recent name="C:\Users\JluTIger\seckill\src\main\webapp\WEB-INF\jsp" />
       <recent name="C:\Users\JluTIger\seckill\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\JluTIger\seckill\src\main\resources" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="org.seckill" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\secSale\src\main\java\org\seckill" />
@@ -220,13 +197,16 @@
       <recent name="C:\Users\JluTIger\seckill\src\main\webapp\WEB-INF\jsp\common" />
       <recent name="C:\Users\JluTIger\seckill\src\main\resources\mapper" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.seckill" />
+    </key>
   </component>
   <component name="RunManager" selected="Maven.seckill [jetty:run]">
     <configuration name="RedisDaoTest.testSeckill" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seckill" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.seckill.dao.cache.*" />
+          <option name="PATTERN" value="org.seckill.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -474,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595923097537</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1013">
+      <created>1634131162921</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1634131162921</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,12 +498,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="0728" />
-    <option name="LAST_COMMIT_MESSAGE" value="0728" />
+    <MESSAGE value="1013" />
+    <option name="LAST_COMMIT_MESSAGE" value="1013" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="267" y="19" key="#Inspections" timestamp="1628704482275">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="401" y="29" key="#Inspections" timestamp="1634786501653">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="401" y="29" key="#Inspections/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1634786501653" />
     <state x="267" y="19" key="#Inspections/0.0.1280.680@0.0.1280.680" timestamp="1628704482275" />
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1632728262932">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -526,53 +515,61 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1628704442130" />
-    <state x="600" y="108" key="CommitChangelistDialog2" timestamp="1627972255041">
+    <state x="743" y="391" width="433" height="264" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1634785755965">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="600" y="108" key="CommitChangelistDialog2/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1627972255041" />
+    <state x="743" y="391" width="433" height="264" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1634785755965" />
+    <state x="743" y="403" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1634785713843">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="743" y="403" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1634785713843" />
+    <state x="600" y="108" key="CommitChangelistDialog2" timestamp="1634801927948">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="600" y="108" key="CommitChangelistDialog2/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1634801927948" />
     <state x="739" y="274" key="FileChooserDialogImpl" timestamp="1627383251242">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="274" key="FileChooserDialogImpl/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1627383251242" />
-    <state width="1877" height="573" key="GridCell.Tab.0.bottom" timestamp="1626745522751">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="573" key="GridCell.Tab.0.bottom" timestamp="1634177800943">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="573" key="GridCell.Tab.0.bottom/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1626319938375" />
+    <state width="1877" height="573" key="GridCell.Tab.0.bottom/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1634177800943" />
     <state width="1877" height="573" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626745522751" />
-    <state width="1877" height="573" key="GridCell.Tab.0.center" timestamp="1626745522751">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="573" key="GridCell.Tab.0.center" timestamp="1634177800943">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="573" key="GridCell.Tab.0.center/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1626319938375" />
+    <state width="1877" height="573" key="GridCell.Tab.0.center/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1634177800943" />
     <state width="1877" height="573" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626745522751" />
-    <state width="1877" height="573" key="GridCell.Tab.0.left" timestamp="1626745522751">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="573" key="GridCell.Tab.0.left" timestamp="1634177800943">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="573" key="GridCell.Tab.0.left/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1626319938375" />
+    <state width="1877" height="573" key="GridCell.Tab.0.left/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1634177800943" />
     <state width="1877" height="573" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626745522751" />
-    <state width="1877" height="573" key="GridCell.Tab.0.right" timestamp="1626745522751">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="573" key="GridCell.Tab.0.right" timestamp="1634177800943">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="573" key="GridCell.Tab.0.right/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1626319938375" />
+    <state width="1877" height="573" key="GridCell.Tab.0.right/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1634177800943" />
     <state width="1877" height="573" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626745522751" />
-    <state width="1877" height="573" key="GridCell.Tab.1.bottom" timestamp="1626745522751">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="573" key="GridCell.Tab.1.bottom" timestamp="1634177800943">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="573" key="GridCell.Tab.1.bottom/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1626319938375" />
+    <state width="1877" height="573" key="GridCell.Tab.1.bottom/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1634177800943" />
     <state width="1877" height="573" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626745522751" />
-    <state width="1877" height="573" key="GridCell.Tab.1.center" timestamp="1626745522751">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="573" key="GridCell.Tab.1.center" timestamp="1634177800943">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="573" key="GridCell.Tab.1.center/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1626319938375" />
+    <state width="1877" height="573" key="GridCell.Tab.1.center/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1634177800943" />
     <state width="1877" height="573" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1626745522751" />
-    <state width="1877" height="573" key="GridCell.Tab.1.left" timestamp="1626745522751">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="573" key="GridCell.Tab.1.left" timestamp="1634177800943">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="573" key="GridCell.Tab.1.left/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1626319938375" />
+    <state width="1877" height="573" key="GridCell.Tab.1.left/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1634177800943" />
     <state width="1877" height="573" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1626745522751" />
-    <state width="1877" height="573" key="GridCell.Tab.1.right" timestamp="1626745522751">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="573" key="GridCell.Tab.1.right" timestamp="1634177800943">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="573" key="GridCell.Tab.1.right/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1626319938375" />
+    <state width="1877" height="573" key="GridCell.Tab.1.right/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1634177800943" />
     <state width="1877" height="573" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1626745522751" />
     <state x="257" y="0" key="Maven.ArtifactSearchDialog" timestamp="1632732249231">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -584,10 +581,14 @@
     </state>
     <state x="468" y="165" key="SettingsEditor/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1632725732522" />
     <state x="136" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1627410564759" />
-    <state x="664" y="262" width="591" height="516" key="find.popup" timestamp="1634007854483">
+    <state x="758" y="209" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1634284598575">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="664" y="262" width="591" height="516" key="find.popup/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1634007854483" />
+    <state x="758" y="209" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1634284598575" />
+    <state x="664" y="262" width="591" height="516" key="find.popup" timestamp="1634814420793">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="664" y="262" width="591" height="516" key="find.popup/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1634814420793" />
     <state x="443" y="164" width="570" height="516" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1627411435688" />
     <state x="282" y="67" width="700" height="530" key="recent.locations.popup" timestamp="1627478804191">
       <screen x="0" y="0" width="1280" height="680" />
@@ -597,10 +598,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1627411110065" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1632728999308">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1634785944646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1632728999308" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1634785944646" />
     <state x="415" y="147" width="672" height="444" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1628703352901" />
   </component>
 </project>
