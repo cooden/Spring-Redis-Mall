@@ -13,3 +13,4 @@ user_role
 users
 
 
+启动Springboot nohup java -jar test.war
