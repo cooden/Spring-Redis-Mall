@@ -1,7 +1,7 @@
 基于SpringMVC+Spring+Redis+MyBatis实现高并发秒杀API，分布式锁实现任务调度
 
 ## 关于权限管理
-权限管理表，使用的是权限五表结构，如需做权限控制，修改
+权限管理表，使用的是权限五表结构，如需做权限控制，修改permission后在role_permission里将权限加给administrator就行，只有一个用户
 permission
 ->
 role_permission
