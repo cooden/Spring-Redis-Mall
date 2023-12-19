@@ -17,11 +17,13 @@ users
 
 ## WEB前端页面逻辑
 项目以高并发为主，故简化登录逻辑如下
+```java
 详情页
    |
 Login --no-- 登录页
    | yes       |
   展示      写入cookie
+```
 
 
 ## 启动Springboot 
